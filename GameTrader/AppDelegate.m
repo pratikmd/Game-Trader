@@ -7,14 +7,21 @@
 //
 
 #import "AppDelegate.h"
+#import "LoginViewController.h"
+#import <CloudMine/CloudMine.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    CMAPICredentials *credentials = [CMAPICredentials sharedInstance];
+    credentials.appIdentifier = @"5646d053848741ac99b8b13450c47126";
+    credentials.appSecret = @"0a2abd99e59d47ccaff5e7d73c8bf939";
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    LoginViewController *viewController = [[LoginViewController alloc] init];
     self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = viewController;
     [self.window makeKeyAndVisible];
     return YES;
 }

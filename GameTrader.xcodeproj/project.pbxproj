@@ -19,6 +19,19 @@
 		61B70B5417F3A8B6002360A0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B70B3C17F3A8B6002360A0 /* UIKit.framework */; };
 		61B70B5C17F3A8B6002360A0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61B70B5A17F3A8B6002360A0 /* InfoPlist.strings */; };
 		61B70B5E17F3A8B6002360A0 /* GameTraderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B70B5D17F3A8B6002360A0 /* GameTraderTests.m */; };
+		61B70B6A17F3A8DD002360A0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B70B6817F3A8DD002360A0 /* LoginViewController.m */; };
+		61B70B6B17F3A8DD002360A0 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61B70B6917F3A8DD002360A0 /* LoginViewController.xib */; };
+		61B70B6D17F3ABB7002360A0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B70B6C17F3ABB7002360A0 /* CFNetwork.framework */; };
+		61B70B6F17F3ABC7002360A0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B70B6E17F3ABC7002360A0 /* libz.dylib */; };
+		61B70B7117F3ABCE002360A0 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B70B7017F3ABCE002360A0 /* MobileCoreServices.framework */; };
+		61B70B7317F3ABD5002360A0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B70B7217F3ABD5002360A0 /* SystemConfiguration.framework */; };
+		61B70B7517F3ABF3002360A0 /* CloudMine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B70B7417F3ABF3002360A0 /* CloudMine.framework */; };
+		61B70B7817F3B185002360A0 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B70B7717F3B185002360A0 /* User.m */; };
+		61B70B7B17F3B412002360A0 /* Listing.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B70B7A17F3B412002360A0 /* Listing.m */; };
+		61B70B7F17F3B87C002360A0 /* ListingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B70B7D17F3B87C002360A0 /* ListingViewController.m */; };
+		61B70B8017F3B87C002360A0 /* ListingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61B70B7E17F3B87C002360A0 /* ListingViewController.xib */; };
+		61B70B8417F3B8DE002360A0 /* NewUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B70B8217F3B8DE002360A0 /* NewUserViewController.m */; };
+		61B70B8517F3B8DE002360A0 /* NewUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61B70B8317F3B8DE002360A0 /* NewUserViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +61,24 @@
 		61B70B5917F3A8B6002360A0 /* GameTraderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GameTraderTests-Info.plist"; sourceTree = "<group>"; };
 		61B70B5B17F3A8B6002360A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		61B70B5D17F3A8B6002360A0 /* GameTraderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameTraderTests.m; sourceTree = "<group>"; };
+		61B70B6717F3A8DD002360A0 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ../LoginViewController.h; sourceTree = "<group>"; };
+		61B70B6817F3A8DD002360A0 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ../LoginViewController.m; sourceTree = "<group>"; };
+		61B70B6917F3A8DD002360A0 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = ../LoginViewController.xib; sourceTree = "<group>"; };
+		61B70B6C17F3ABB7002360A0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		61B70B6E17F3ABC7002360A0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		61B70B7017F3ABCE002360A0 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		61B70B7217F3ABD5002360A0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		61B70B7417F3ABF3002360A0 /* CloudMine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CloudMine.framework; sourceTree = "<group>"; };
+		61B70B7617F3B185002360A0 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = ../User.h; sourceTree = "<group>"; };
+		61B70B7717F3B185002360A0 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = ../User.m; sourceTree = "<group>"; };
+		61B70B7917F3B412002360A0 /* Listing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Listing.h; path = ../Listing.h; sourceTree = "<group>"; };
+		61B70B7A17F3B412002360A0 /* Listing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Listing.m; path = ../Listing.m; sourceTree = "<group>"; };
+		61B70B7C17F3B87C002360A0 /* ListingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListingViewController.h; path = ../ListingViewController.h; sourceTree = "<group>"; };
+		61B70B7D17F3B87C002360A0 /* ListingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListingViewController.m; path = ../ListingViewController.m; sourceTree = "<group>"; };
+		61B70B7E17F3B87C002360A0 /* ListingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListingViewController.xib; path = ../ListingViewController.xib; sourceTree = "<group>"; };
+		61B70B8117F3B8DE002360A0 /* NewUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewUserViewController.h; path = ../NewUserViewController.h; sourceTree = "<group>"; };
+		61B70B8217F3B8DE002360A0 /* NewUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewUserViewController.m; path = ../NewUserViewController.m; sourceTree = "<group>"; };
+		61B70B8317F3B8DE002360A0 /* NewUserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewUserViewController.xib; path = ../NewUserViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +86,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61B70B3B17F3A8B6002360A0 /* CoreGraphics.framework in Frameworks */,
 				61B70B3D17F3A8B6002360A0 /* UIKit.framework in Frameworks */,
+				61B70B7317F3ABD5002360A0 /* SystemConfiguration.framework in Frameworks */,
+				61B70B7117F3ABCE002360A0 /* MobileCoreServices.framework in Frameworks */,
+				61B70B6F17F3ABC7002360A0 /* libz.dylib in Frameworks */,
+				61B70B3B17F3A8B6002360A0 /* CoreGraphics.framework in Frameworks */,
+				61B70B6D17F3ABB7002360A0 /* CFNetwork.framework in Frameworks */,
 				61B70B3917F3A8B6002360A0 /* Foundation.framework in Frameworks */,
+				61B70B7517F3ABF3002360A0 /* CloudMine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +132,11 @@
 		61B70B3717F3A8B6002360A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				61B70B7417F3ABF3002360A0 /* CloudMine.framework */,
+				61B70B7217F3ABD5002360A0 /* SystemConfiguration.framework */,
+				61B70B7017F3ABCE002360A0 /* MobileCoreServices.framework */,
+				61B70B6E17F3ABC7002360A0 /* libz.dylib */,
+				61B70B6C17F3ABB7002360A0 /* CFNetwork.framework */,
 				61B70B3817F3A8B6002360A0 /* Foundation.framework */,
 				61B70B3A17F3A8B6002360A0 /* CoreGraphics.framework */,
 				61B70B3C17F3A8B6002360A0 /* UIKit.framework */,
@@ -109,6 +150,19 @@
 			children = (
 				61B70B4717F3A8B6002360A0 /* AppDelegate.h */,
 				61B70B4817F3A8B6002360A0 /* AppDelegate.m */,
+				61B70B7617F3B185002360A0 /* User.h */,
+				61B70B7717F3B185002360A0 /* User.m */,
+				61B70B7917F3B412002360A0 /* Listing.h */,
+				61B70B7A17F3B412002360A0 /* Listing.m */,
+				61B70B8117F3B8DE002360A0 /* NewUserViewController.h */,
+				61B70B8217F3B8DE002360A0 /* NewUserViewController.m */,
+				61B70B8317F3B8DE002360A0 /* NewUserViewController.xib */,
+				61B70B7C17F3B87C002360A0 /* ListingViewController.h */,
+				61B70B7D17F3B87C002360A0 /* ListingViewController.m */,
+				61B70B7E17F3B87C002360A0 /* ListingViewController.xib */,
+				61B70B6717F3A8DD002360A0 /* LoginViewController.h */,
+				61B70B6817F3A8DD002360A0 /* LoginViewController.m */,
+				61B70B6917F3A8DD002360A0 /* LoginViewController.xib */,
 				61B70B4A17F3A8B6002360A0 /* Images.xcassets */,
 				61B70B3F17F3A8B6002360A0 /* Supporting Files */,
 			);
@@ -221,6 +275,9 @@
 			files = (
 				61B70B4317F3A8B6002360A0 /* InfoPlist.strings in Resources */,
 				61B70B4B17F3A8B6002360A0 /* Images.xcassets in Resources */,
+				61B70B8517F3B8DE002360A0 /* NewUserViewController.xib in Resources */,
+				61B70B6B17F3A8DD002360A0 /* LoginViewController.xib in Resources */,
+				61B70B8017F3B87C002360A0 /* ListingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,8 +296,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61B70B7817F3B185002360A0 /* User.m in Sources */,
+				61B70B7B17F3B412002360A0 /* Listing.m in Sources */,
 				61B70B4917F3A8B6002360A0 /* AppDelegate.m in Sources */,
+				61B70B7F17F3B87C002360A0 /* ListingViewController.m in Sources */,
 				61B70B4517F3A8B6002360A0 /* main.m in Sources */,
+				61B70B6A17F3A8DD002360A0 /* LoginViewController.m in Sources */,
+				61B70B8417F3B8DE002360A0 /* NewUserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,9 +421,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/pdesai2/IOSStuff/GameTrader,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GameTrader/GameTrader-Prefix.pch";
 				INFOPLIST_FILE = "GameTrader/GameTrader-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -372,9 +442,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/pdesai2/IOSStuff/GameTrader,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GameTrader/GameTrader-Prefix.pch";
 				INFOPLIST_FILE = "GameTrader/GameTrader-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -441,6 +519,7 @@
 				61B70B6317F3A8B6002360A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		61B70B6417F3A8B6002360A0 /* Build configuration list for PBXNativeTarget "GameTraderTests" */ = {
 			isa = XCConfigurationList;
@@ -449,6 +528,7 @@
 				61B70B6617F3A8B6002360A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
