@@ -53,7 +53,7 @@
     {
         CMUser *user = [[CMUser alloc] initWithUsername:userNameLabel.text andPassword:passwordLabel.text];
     [user createAccountWithCallback:^(CMUserAccountResult resultCode, NSArray *messages) {
-        switch(resultCode) {
+        switch(resultCode) { //TODO:Complete enumerated values
             case CMUserAccountCreateSucceeded:
             {
                     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Account Created !" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];

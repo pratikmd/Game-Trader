@@ -51,7 +51,7 @@
         CMUser *user = [[CMUser alloc] initWithUsername:[userNameTextField text] andPassword:[passwordTextField text]];
         [user loginWithCallback:^(CMUserAccountResult resultCode, NSArray *messages) {
             // check result status
-            switch(resultCode) {
+            switch(resultCode) {//TODO:Complete enumerated values
                 case CMUserAccountLoginSucceeded:
 //                    statusLabel.text = @"DONE !";
                     break;
