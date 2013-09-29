@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "NewUserViewController.h"
+#import "ListingViewController.h"
 
 @interface LoginViewController ()
 
@@ -53,7 +54,11 @@
             // check result status
             switch(resultCode) {//TODO:Complete enumerated values
                 case CMUserAccountLoginSucceeded:
-//                    statusLabel.text = @"DONE !";
+                {
+                    ListingViewController *viewController = [[ListingViewController alloc] init];
+                    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+                    [self presentViewController:navigationController animated:YES completion:nil];
+                }
                     break;
                 case CMUserAccountLoginFailedIncorrectCredentials:
                     statusLabel.text = @"Incorrect credentials";

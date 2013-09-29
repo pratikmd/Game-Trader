@@ -121,7 +121,7 @@
         [alert show];
         return FALSE;
     }
-    if(!phoneLabel.text.length == 0)
+    if(phoneLabel.text.length == 0)
     {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter a phone number." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61895F3517F8C8C4005D0D24 /* ListStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 61895F3417F8C8C4005D0D24 /* ListStore.m */; };
 		61B70B3917F3A8B6002360A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B70B3817F3A8B6002360A0 /* Foundation.framework */; };
 		61B70B3B17F3A8B6002360A0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B70B3A17F3A8B6002360A0 /* CoreGraphics.framework */; };
 		61B70B3D17F3A8B6002360A0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B70B3C17F3A8B6002360A0 /* UIKit.framework */; };
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		61895F3317F8C8C4005D0D24 /* ListStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListStore.h; path = ../ListStore.h; sourceTree = "<group>"; };
+		61895F3417F8C8C4005D0D24 /* ListStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListStore.m; path = ../ListStore.m; sourceTree = "<group>"; };
 		61B70B3517F3A8B6002360A0 /* GameTrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameTrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61B70B3817F3A8B6002360A0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		61B70B3A17F3A8B6002360A0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -150,6 +153,8 @@
 			children = (
 				61B70B4717F3A8B6002360A0 /* AppDelegate.h */,
 				61B70B4817F3A8B6002360A0 /* AppDelegate.m */,
+				61895F3317F8C8C4005D0D24 /* ListStore.h */,
+				61895F3417F8C8C4005D0D24 /* ListStore.m */,
 				61B70B7617F3B185002360A0 /* User.h */,
 				61B70B7717F3B185002360A0 /* User.m */,
 				61B70B7917F3B412002360A0 /* Listing.h */,
@@ -303,6 +308,7 @@
 				61B70B4517F3A8B6002360A0 /* main.m in Sources */,
 				61B70B6A17F3A8DD002360A0 /* LoginViewController.m in Sources */,
 				61B70B8417F3B8DE002360A0 /* NewUserViewController.m in Sources */,
+				61895F3517F8C8C4005D0D24 /* ListStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
