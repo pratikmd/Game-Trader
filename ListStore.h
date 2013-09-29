@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Listing.h"
+#import "User.h"
 
 @interface ListStore : NSObject
-
+{
+    NSMutableArray *_listStore;
+}
+-(void) addNewListObject:(Listing *)listing;
++(ListStore *)Store;
 @end

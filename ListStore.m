@@ -8,6 +8,18 @@
 
 #import "ListStore.h"
 
-@implementation ListStore
+static ListStore *shared;
 
+@implementation ListStore
++(ListStore *) Store
+{
+    if(!shared)
+        shared = [[ListStore alloc] init];
+    return shared;
+}
+
+-(void) addNewListObject:(Listing *)listing
+{
+    [_listStore addObject:listing];
+}
 @end

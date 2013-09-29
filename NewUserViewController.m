@@ -51,8 +51,8 @@
 - (IBAction)doneButtonPressed:(id)sender {
     if([self parametersAreValid])
     {
-        CMUser *user = [[CMUser alloc] initWithUsername:userNameLabel.text andPassword:passwordLabel.text];
-    [user createAccountWithCallback:^(CMUserAccountResult resultCode, NSArray *messages) {
+        CMUser *user = [[CMUser alloc] initWithEmail:userNameLabel.text andPassword:passwordLabel.text];
+    [user createAccountAndLoginWithCallback:^(CMUserAccountResult resultCode, NSArray *messages) {
         switch(resultCode) { //TODO:Complete enumerated values
             case CMUserAccountCreateSucceeded:
             {
@@ -67,6 +67,7 @@
                 // this account already exists
                 break;
         }
+        [self dismissViewControllerAnimated:YES completion:nil];
     }];
     }
 }
