@@ -68,6 +68,11 @@
 }
 
 - (IBAction)addImageButtonPressed:(id)sender {
+    UIImagePickerController *imgPicker = [[UIImagePickerController alloc] init];
+    imgPicker.delegate = self;
+    imgPicker.sourceType = UIImagePickerControllerCameraCaptureModePhoto;
+    
+    [self presentViewController:imgPicker animated:YES completion:nil];
 }
 
 - (IBAction)cancelButtonPressed:(id)sender {

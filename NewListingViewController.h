@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NewListingViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface NewListingViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
     NSArray *_dataArray;
 }
