@@ -7,6 +7,9 @@
 //
 
 #import "ListingViewController.h"
+#import "ListStore.h"
+#import "NewListingViewController.h"
+#import <CloudMine/CloudMine.h>
 
 @interface ListingViewController ()
 
@@ -26,8 +29,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewListing)];
+    UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(logoutUser)];
+    self.navigationItem.rightBarButtonItem = logoutButton;
+    self.navigationItem.leftBarButtonItem = addButton;
+        // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -123,5 +129,29 @@
 }
  
  */
+
+-(void)addNewListing
+{
+    NewListingViewController *viewController = [[NewListingViewController alloc] init];
+    [self presentViewController:viewController animated:YES completion:nil];
+}
+
+-(void)logoutUser
+{
+    CMUser *user = [[ListStore Store] getUser];
+    [user logoutWithCallback:^(CMUserAccountResult resultCode, NSArray *messages) {
+        // check result status
+        switch(resultCode) {
+            case CMUserAccountLogoutSucceeded:
+            {
+                [self dismissViewControllerAnimated:YES completion:nil];
+            }
+                break;
+            case CMUserAccountOperationFailedUnknownAccount:
+                // unknown account error
+                break;
+        }
+    }];
+}
 
 @end

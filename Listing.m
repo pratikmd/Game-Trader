@@ -15,6 +15,16 @@ NSString *knamekey = @"nameKey";
 NSString *kexpectedPriceKey = @"expectedPriceKey";
 NSString *kuserNameKey = @"userNameKey";
 
+-(id)initWithNames:(NSString *)name type:(NSString *)type price:(NSString *)price username:(NSString *)userName
+{
+    self = [self init];
+    _userName = userName;
+    _name = name;
+    _type = type;
+    _expectedPrice = price;
+    return self;
+}
+
 -(void)encodeWithCoder:(NSCoder *)aCoder
 {
     [super encodeWithCoder:aCoder];

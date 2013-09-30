@@ -22,4 +22,19 @@ static ListStore *shared;
 {
     [_listStore addObject:listing];
 }
+
+-(void) setUser:(CMUser *)user
+{
+    _currentUser = user;
+}
+
+-(CMUser *)getUser
+{
+    return _currentUser;
+}
+
+-(int)getCount
+{
+    return [_listStore count];
+}
 @end

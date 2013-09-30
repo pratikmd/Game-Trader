@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "NewUserViewController.h"
 #import "ListingViewController.h"
+#import "ListStore.h"
 
 @interface LoginViewController ()
 
@@ -55,8 +56,11 @@
             switch(resultCode) {//TODO:Complete enumerated values
                 case CMUserAccountLoginSucceeded:
                 {
+                    [[ListStore Store] setUser:user];
                     ListingViewController *viewController = [[ListingViewController alloc] init];
                     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+                    userNameTextField.text = @"";
+                    passwordTextField.text = @"";
                     [self presentViewController:navigationController animated:YES completion:nil];
                 }
                     break;

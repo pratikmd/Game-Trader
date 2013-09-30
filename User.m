@@ -15,6 +15,15 @@ NSString *knameKey = @"nameKey";
 NSString *kuserAddressKey = @"userAddressKey";
 NSString *kuserPhoneKey = @"userPhoneKey";
 
+-(id)initWithUserName:(NSString *)userName name:(NSString *)name address:(NSString *)address phone:(NSString *)phone
+{
+    self = [super init];
+    _userName = userName;
+    _userAddress = address;
+    _userPhone = phone;
+    return self;
+}
+
 -(void) encodeWithCoder:(NSCoder *)aCoder
 {
     [super encodeWithCoder:aCoder];

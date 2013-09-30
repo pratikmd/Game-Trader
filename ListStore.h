@@ -7,13 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CloudMine/CloudMine.h>
 #import "Listing.h"
 #import "User.h"
 
 @interface ListStore : NSObject
 {
     NSMutableArray *_listStore;
+    CMUser *_currentUser;
 }
--(void) addNewListObject:(Listing *)listing;
+
 +(ListStore *)Store;
+
+-(void) addNewListObject:(Listing *)listing;
+-(void)setUser:(CMUser *)user;
+-(CMUser *)getUser;
+-(int)getCount;
+
 @end
