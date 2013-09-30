@@ -45,6 +45,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [[self view] endEditing:TRUE];
+}
+
+
 // returns the number of 'columns' to display.
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
@@ -65,9 +70,14 @@
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row   inComponent:(NSInteger)component
 {
     typeLabel.text = [_dataArray objectAtIndex:row];
+    picker.hidden = YES;
 }
 
-- (IBAction)addImageButtonPressed:(id)sender {
+- (IBAction)typeTextFieldDidStartEditing:(id)sender {
+    picker.hidden = NO;
+}
+
+- (IBAction)addImageButtonPressed:(id)sender { //TODO : Test this
     UIImagePickerController *imgPicker = [[UIImagePickerController alloc] init];
     imgPicker.delegate = self;
     imgPicker.sourceType = UIImagePickerControllerCameraCaptureModePhoto;

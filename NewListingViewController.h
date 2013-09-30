@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *priceLabel;
 @property (weak, nonatomic) IBOutlet UITextField *typeLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *listingImage;
-
+- (IBAction)typeTextFieldDidStartEditing:(id)sender;
 - (IBAction)addImageButtonPressed:(id)sender;
 - (IBAction)cancelButtonPressed:(id)sender;
 - (IBAction)doneButtonPressed:(id)sender;
