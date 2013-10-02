@@ -77,7 +77,7 @@
     picker.hidden = NO;
 }
 
-- (IBAction)addImageButtonPressed:(id)sender { //TODO : Test this
+- (IBAction)addImageButtonPressed:(id)sender { //TODO : Test this on the device
     UIImagePickerController *imgPicker = [[UIImagePickerController alloc] init];
     imgPicker.delegate = self;
     imgPicker.sourceType = UIImagePickerControllerCameraCaptureModePhoto;

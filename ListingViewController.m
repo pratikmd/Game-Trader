@@ -8,6 +8,7 @@
 
 #import "ListingViewController.h"
 #import "ListStore.h"
+#import "Listing.h"
 #import "NewListingViewController.h"
 #import <CloudMine/CloudMine.h>
 
@@ -39,6 +40,18 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    CMStore *store = [CMStore defaultStore];
+    [store allObjectsOfClass:[Listing class]
+           additionalOptions:nil
+                    callback:^(CMObjectFetchResponse *response) {
+                        NSLog(@"Objects: %@", response.objects);
+                    }
+     ];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
