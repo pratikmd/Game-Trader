@@ -18,6 +18,7 @@
 @synthesize priceLabel;
 @synthesize picker;
 @synthesize typeLabel;
+@synthesize listingImage;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -76,13 +77,22 @@
 - (IBAction)typeTextFieldDidStartEditing:(id)sender {
     picker.hidden = NO;
 }
+- (void) imagePickerController: (UIImagePickerController *) picker
+ didFinishPickingMediaWithInfo: (NSDictionary *) info {
+    
+ //   NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
+    _originalImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+    
+    listingImage.image = _originalImage;
+    [_imgPicker dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (IBAction)addImageButtonPressed:(id)sender { //TODO : Test this on the device
-    UIImagePickerController *imgPicker = [[UIImagePickerController alloc] init];
-    imgPicker.delegate = self;
-    imgPicker.sourceType = UIImagePickerControllerCameraCaptureModePhoto;
+    _imgPicker = [[UIImagePickerController alloc] init];
+    _imgPicker.delegate = self;
+    _imgPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
     
-    [self presentViewController:imgPicker animated:YES completion:nil];
+    [self presentViewController:_imgPicker animated:YES completion:nil];
 }
 
 - (IBAction)cancelButtonPressed:(id)sender {
@@ -90,5 +100,6 @@
 }
 
 - (IBAction)doneButtonPressed:(id)sender {
+    
 }
 @end

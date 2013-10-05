@@ -11,6 +11,8 @@
 @interface NewListingViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
     NSArray *_dataArray;
+    UIImagePickerController *_imgPicker;
+    UIImage *_originalImage;
 }
 
 @property (weak, nonatomic) IBOutlet UIPickerView *nameLabel;
