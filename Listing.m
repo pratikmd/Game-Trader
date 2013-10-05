@@ -44,4 +44,9 @@ NSString *kuserNameKey = @"userNameKey";
     return self;
 }
 
+-(NSString *)getName
+{
+    return _name;
+}
+
 @end

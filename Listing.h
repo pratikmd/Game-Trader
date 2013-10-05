@@ -15,5 +15,6 @@
     NSString *_expectedPrice;
     NSString *_userName;
 }
-
+-(id)initWithNames:(NSString *)name type:(NSString *)type price:(NSString *)price username:(NSString *)userName;
+-(NSString *)getName;
 @end

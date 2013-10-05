@@ -34,6 +34,10 @@
     UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(logoutUser)];
     self.navigationItem.rightBarButtonItem = logoutButton;
     self.navigationItem.leftBarButtonItem = addButton;
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc]
+                                        init];
+    [refreshControl addTarget:self action:@selector(refreshListing)forControlEvents:UIControlEventValueChanged];
+    self.refreshControl = refreshControl;
         // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -41,17 +45,19 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
--(void)viewWillAppear:(BOOL)animated
+-(void)refreshListing
 {
     CMStore *store = [CMStore defaultStore];
-    [store allObjectsOfClass:[Listing class]
-           additionalOptions:nil
-                    callback:^(CMObjectFetchResponse *response) {
-                        NSLog(@"Objects: %@", response.objects);
-                    }
-     ];
+    [store allObjectsOfClass:[Listing class] additionalOptions:nil callback:^(CMObjectFetchResponse *response) {
+        NSArray *listings = response.objects;
+        _arrayOfLists = [listings mutableCopy];
+    }];
 }
 
+-(void)reloadTable
+{
+    [self.tableView reloadData];
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -64,13 +70,13 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 0;
+    return _arrayOfLists.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -81,7 +87,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    // Configure the cell...
+    Listing *listing = [_arrayOfLists objectAtIndex:indexPath.row];
+    cell.textLabel.text = listing.getName;
     
     return cell;
 }

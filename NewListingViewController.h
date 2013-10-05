@@ -15,7 +15,7 @@
     UIImage *_originalImage;
 }
 
-@property (weak, nonatomic) IBOutlet UIPickerView *nameLabel;
+@property (weak, nonatomic) IBOutlet UITextField *nameLabel;
 @property (weak, nonatomic) IBOutlet UITextField *priceLabel;
 @property (weak, nonatomic) IBOutlet UITextField *typeLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *listingImage;

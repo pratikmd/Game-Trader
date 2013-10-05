@@ -8,6 +8,7 @@
 
 #import "NewListingViewController.h"
 #import "ListStore.h"
+#import "Listing.h"
 
 @interface NewListingViewController ()
 
@@ -99,7 +100,47 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)doneButtonPressed:(id)sender {
-    
+- (IBAction)doneButtonPressed:(id)sender { //TODO : add alerts
+    CMStore *store = [CMStore defaultStore];
+    CMUser *currentUser = [[ListStore Store] getUser];
+    NSString *userName = currentUser.email;
+    Listing *listing = [[Listing alloc] initWithNames:nameLabel.text type:typeLabel.text price:priceLabel.text username:userName];
+    if([self parametersChecked])
+    {
+        if(_originalImage != nil)
+        {
+            NSData *imageData = UIImagePNGRepresentation(_originalImage);
+            [store saveFileWithData:imageData named:[NSString stringWithFormat:@"%@:%@",userName,nameLabel] additionalOptions:nil callback:^(CMFileUploadResponse *response) {
+                switch(response.result) {
+                    case CMFileCreated:
+                    // the file was created, do something with it
+                    break;
+                    case CMFileUpdated:
+                    // the file was updated, do something with it
+                    break;
+                    case CMFileUploadFailed:
+                    // upload failed!
+                    break;
+                }
+            [self uploadListing:listing];
+            }];
+        }
+        else
+            [self uploadListing:listing];
+    }
+}
+
+-(void) uploadListing:(Listing *)listing
+{
+    [listing save:^(CMObjectUploadResponse *response) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
+}
+
+- (BOOL)parametersChecked
+{
+    if(priceLabel.text.length == 0 || typeLabel.text.length == 0 || nameLabel.text.length == 0 )
+        return NO;
+    return YES;
 }
 @end
