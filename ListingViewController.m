@@ -10,6 +10,7 @@
 #import "ListStore.h"
 #import "Listing.h"
 #import "NewListingViewController.h"
+#import "GameDetailViewController.h"
 #import <CloudMine/CloudMine.h>
 
 @interface ListingViewController ()
@@ -38,6 +39,7 @@
                                         init];
     [refreshControl addTarget:self action:@selector(refreshListing)forControlEvents:UIControlEventValueChanged];
     self.refreshControl = refreshControl;
+    [self refreshListing];
         // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -51,12 +53,26 @@
     [store allObjectsOfClass:[Listing class] additionalOptions:nil callback:^(CMObjectFetchResponse *response) {
         NSArray *listings = response.objects;
         _arrayOfLists = [listings mutableCopy];
+        [self getImage];
     }];
+}
+
+-(void)getImage
+{
+//    CMStore *store;
+//
+//    [store fileWithName:@"kitten.jpg" additionalOptions:nil callback:^(CMFileFetchResponse *response) {
+//        NSData *imageData = response.file.fileData;
+//        
+//        // do something with the data..
+//    }];
+    [self reloadTable];
 }
 
 -(void)reloadTable
 {
     [self.tableView reloadData];
+    [self.refreshControl endRefreshing];
 }
 
 - (void)didReceiveMemoryWarning
@@ -84,11 +100,13 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
     Listing *listing = [_arrayOfLists objectAtIndex:indexPath.row];
     cell.textLabel.text = listing.getName;
+    cell.detailTextLabel.text = listing.getCost;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
@@ -102,7 +120,7 @@
 }
 */
 
-/*
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -114,7 +132,7 @@
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
+
 
 /*
 // Override to support rearranging the table view.
@@ -132,7 +150,7 @@
 }
 */
 
-/*
+
 #pragma mark - Table view delegate
 
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
@@ -140,15 +158,16 @@
 {
     // Navigation logic may go here, for example:
     // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+    GameDetailViewController *detailViewController = [[GameDetailViewController alloc] init];
 
     // Pass the selected object to the new view controller.
     
+    detailViewController.listing = [_arrayOfLists objectAtIndex:indexPath.row];
     // Push the view controller.
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
  
- */
+
 
 -(void)addNewListing
 {

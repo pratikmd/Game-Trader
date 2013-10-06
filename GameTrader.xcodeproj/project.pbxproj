@@ -10,6 +10,8 @@
 		61895F3517F8C8C4005D0D24 /* ListStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 61895F3417F8C8C4005D0D24 /* ListStore.m */; };
 		61895F3917F8E957005D0D24 /* NewListingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61895F3717F8E957005D0D24 /* NewListingViewController.m */; };
 		61895F3A17F8E957005D0D24 /* NewListingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61895F3817F8E957005D0D24 /* NewListingViewController.xib */; };
+		61895F3E1800C284005D0D24 /* GameDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61895F3C1800C284005D0D24 /* GameDetailViewController.m */; };
+		61895F3F1800C284005D0D24 /* GameDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61895F3D1800C284005D0D24 /* GameDetailViewController.xib */; };
 		61B70B3917F3A8B6002360A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B70B3817F3A8B6002360A0 /* Foundation.framework */; };
 		61B70B3B17F3A8B6002360A0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B70B3A17F3A8B6002360A0 /* CoreGraphics.framework */; };
 		61B70B3D17F3A8B6002360A0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B70B3C17F3A8B6002360A0 /* UIKit.framework */; };
@@ -53,6 +55,9 @@
 		61895F3617F8E957005D0D24 /* NewListingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewListingViewController.h; path = ../NewListingViewController.h; sourceTree = "<group>"; };
 		61895F3717F8E957005D0D24 /* NewListingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewListingViewController.m; path = ../NewListingViewController.m; sourceTree = "<group>"; };
 		61895F3817F8E957005D0D24 /* NewListingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewListingViewController.xib; path = ../NewListingViewController.xib; sourceTree = "<group>"; };
+		61895F3B1800C284005D0D24 /* GameDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameDetailViewController.h; path = ../GameDetailViewController.h; sourceTree = "<group>"; };
+		61895F3C1800C284005D0D24 /* GameDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameDetailViewController.m; path = ../GameDetailViewController.m; sourceTree = "<group>"; };
+		61895F3D1800C284005D0D24 /* GameDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GameDetailViewController.xib; path = ../GameDetailViewController.xib; sourceTree = "<group>"; };
 		61B70B3517F3A8B6002360A0 /* GameTrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameTrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61B70B3817F3A8B6002360A0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		61B70B3A17F3A8B6002360A0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -164,6 +169,9 @@
 				61B70B7717F3B185002360A0 /* User.m */,
 				61B70B7917F3B412002360A0 /* Listing.h */,
 				61B70B7A17F3B412002360A0 /* Listing.m */,
+				61895F3B1800C284005D0D24 /* GameDetailViewController.h */,
+				61895F3C1800C284005D0D24 /* GameDetailViewController.m */,
+				61895F3D1800C284005D0D24 /* GameDetailViewController.xib */,
 				61895F3617F8E957005D0D24 /* NewListingViewController.h */,
 				61895F3717F8E957005D0D24 /* NewListingViewController.m */,
 				61895F3817F8E957005D0D24 /* NewListingViewController.xib */,
@@ -289,6 +297,7 @@
 				61B70B4317F3A8B6002360A0 /* InfoPlist.strings in Resources */,
 				61B70B4B17F3A8B6002360A0 /* Images.xcassets in Resources */,
 				61895F3A17F8E957005D0D24 /* NewListingViewController.xib in Resources */,
+				61895F3F1800C284005D0D24 /* GameDetailViewController.xib in Resources */,
 				61B70B8517F3B8DE002360A0 /* NewUserViewController.xib in Resources */,
 				61B70B6B17F3A8DD002360A0 /* LoginViewController.xib in Resources */,
 				61B70B8017F3B87C002360A0 /* ListingViewController.xib in Resources */,
@@ -313,6 +322,7 @@
 				61B70B7817F3B185002360A0 /* User.m in Sources */,
 				61B70B7B17F3B412002360A0 /* Listing.m in Sources */,
 				61B70B4917F3A8B6002360A0 /* AppDelegate.m in Sources */,
+				61895F3E1800C284005D0D24 /* GameDetailViewController.m in Sources */,
 				61B70B7F17F3B87C002360A0 /* ListingViewController.m in Sources */,
 				61B70B4517F3A8B6002360A0 /* main.m in Sources */,
 				61895F3917F8E957005D0D24 /* NewListingViewController.m in Sources */,

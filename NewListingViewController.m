@@ -103,7 +103,7 @@
 - (IBAction)doneButtonPressed:(id)sender { //TODO : add alerts
     CMStore *store = [CMStore defaultStore];
     CMUser *currentUser = [[ListStore Store] getUser];
-    NSString *userName = currentUser.email;
+    NSString *userName = currentUser.username;
     Listing *listing = [[Listing alloc] initWithNames:nameLabel.text type:typeLabel.text price:priceLabel.text username:userName];
     if([self parametersChecked])
     {

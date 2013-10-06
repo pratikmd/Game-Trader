@@ -17,7 +17,7 @@ NSString *kuserNameKey = @"userNameKey";
 
 -(id)initWithNames:(NSString *)name type:(NSString *)type price:(NSString *)price username:(NSString *)userName
 {
-    self = [self init];
+    self = [super init];
     _userName = userName;
     _name = name;
     _type = type;
@@ -44,9 +44,19 @@ NSString *kuserNameKey = @"userNameKey";
     return self;
 }
 
+-(NSString *)getUser
+{
+    return _userName;
+}
+
 -(NSString *)getName
 {
     return _name;
+}
+
+-(NSString *)getCost
+{
+    return _expectedPrice;
 }
 
 @end

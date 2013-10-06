@@ -17,4 +17,6 @@
 }
 -(id)initWithNames:(NSString *)name type:(NSString *)type price:(NSString *)price username:(NSString *)userName;
 -(NSString *)getName;
+-(NSString *)getUser;
+-(NSString *)getCost;
 @end
